@@ -97,10 +97,10 @@ $ grep second *
 $ grep -i second *
 
 29. Найти строки в файлах где есть комбинация букв “second” во всех папках ниже уровнем  
-$ grep \-rw "second"*
+$ grep \-rw "second" */  b 
  
 30. Найти только путь и название файла в строках которых есть комбинация букв “second” в текущей папке  
-$ grep -l second *
+$ realpath $(grep -r -l second *)
 
 31. Найти все строки во всех файлах где нет комбинации “second”
 $ grep -v -r second
